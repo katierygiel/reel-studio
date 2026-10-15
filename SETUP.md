@@ -19,6 +19,9 @@ xcode-select --install
 A window from Apple appears: click **Install**. It may ask for your Mac password: that's macOS installing Apple
 software, the same as any App Store install. If it says it's already installed, great, skip ahead.
 
+Homebrew only has ready-made packages for **macOS 15 or newer**. On an older macOS, update first
+(System Settings → General → Software Update), or Homebrew will try to build everything from scratch for hours.
+
 ## Step 3: Homebrew, then the video and speech tools
 Homebrew is the standard, free installer for developer tools on Macs (https://brew.sh). Its installer asks for your
 Mac password **once**, because it creates a folder in a system location (`/opt/homebrew`). Your password goes to
@@ -29,9 +32,9 @@ macOS only. After that, nothing else in this guide needs your password.
 When it finishes, it shows **Next steps** with 2-3 lines starting with `echo` or `eval`. Copy those lines from your own
 Terminal and run them (they let Terminal find Homebrew). Then:
 ```
-brew install ffmpeg whisper-cpp
+brew install ffmpeg-full whisper-cpp
 ```
-- **ffmpeg**: does all the cutting, captions, sound mixing and exporting.
+- **ffmpeg-full**: does all the cutting, captions, sound mixing and exporting. (The plain `ffmpeg` package can't draw captions.)
 - **whisper-cpp**: turns speech into text, entirely on your Mac.
 
 ## Step 4: get Reel Studio
@@ -57,4 +60,4 @@ In the Claude desktop app, open the **Code** tab, choose the `reel-studio` folde
 
 ## Removing everything later
 - Reel Studio: delete the `reel-studio` folder (your videos in Movies/Reels stay).
-- The tools: `brew uninstall ffmpeg whisper-cpp`. Homebrew itself has an uninstall script on https://brew.sh.
+- The tools: `brew uninstall ffmpeg-full whisper-cpp`. Homebrew itself has an uninstall script on https://brew.sh.

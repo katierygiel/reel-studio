@@ -16,6 +16,11 @@ VIDEO_EXT = {".mov", ".mp4", ".m4v", ".mkv", ".avi", ".mts", ".3gp", ".webm"}
 IMAGE_EXT = {".jpg", ".jpeg", ".png", ".heic", ".heif", ".webp", ".gif"}
 AUDIO_EXT = {".mp3", ".wav", ".m4a", ".aac", ".aif", ".aiff", ".flac", ".ogg"}
 
+# Homebrew's plain "ffmpeg" has no caption support (libass); "ffmpeg-full" does but isn't on the PATH by default.
+for _d in ("/opt/homebrew/opt/ffmpeg-full/bin", "/usr/local/opt/ffmpeg-full/bin"):
+    if os.path.isdir(_d) and _d not in os.environ.get("PATH", ""):
+        os.environ["PATH"] = _d + os.pathsep + os.environ.get("PATH", "")
+
 FPS = 30
 FULL = (1080, 1920)
 PREVIEW = (540, 960)
