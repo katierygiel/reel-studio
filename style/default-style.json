@@ -1,0 +1,55 @@
+{
+  "_about": "Your editing style. Copied to ~/Movies/Reels/_my-style/style.json the first time you run Reel Studio. Edit that copy (or just tell Claude what to change). Fonts: 'family' is the font's name; 'file' is optional and points to a font file inside _my-style/fonts/. Until you pick your own fonts these use fonts that come with every Mac.",
+
+  "fonts": {
+    "caption":    { "family": "Avenir Next", "bold": true, "size": 74, "color": "#FFFFFF", "outline": "#000000", "outline_width": 5, "shadow": 0 },
+    "emphasis":   { "family": "Avenir Next", "bold": true, "size": 86, "color": "#FFD84D", "outline": "#000000", "outline_width": 5, "shadow": 0 },
+    "hook":       { "family": "Futura", "bold": true, "size": 104, "color": "#FFFFFF", "outline": "#000000", "outline_width": 7, "shadow": 2 },
+    "heading":    { "family": "Futura", "bold": true, "size": 84, "color": "#FFFFFF", "outline": "#000000", "outline_width": 5, "shadow": 0 },
+    "typewriter": { "family": "American Typewriter", "bold": false, "size": 64, "color": "#111111", "box": "#FFFFFF" },
+    "label":      { "family": "Avenir Next", "bold": true, "size": 50, "color": "#111111", "box": "#FFFFFF" },
+    "funny":      { "family": "Marker Felt", "bold": true, "size": 96, "color": "#FFFFFF", "outline": "#000000", "outline_width": 6, "shadow": 0 }
+  },
+
+  "captions": {
+    "mode": "highlight",
+    "_modes": "highlight = short phrase, the spoken word lights up | phrase = short phrases | word = one word at a time | build = words appear as spoken | none",
+    "max_words": 3,
+    "y": 0.70,
+    "anim": "pop",
+    "highlight_color": "#FFD84D",
+    "uppercase": false
+  },
+
+  "pacing": {
+    "max_pause": 0.4,
+    "remove_fillers": true,
+    "fillers": ["um", "umm", "uh", "uhh", "uhm", "erm", "er", "ah", "hmm", "mm"]
+  },
+
+  "effects": {
+    "auto_sfx": true,
+    "sfx_volume": 0.45,
+    "zoom_scale": 1.12,
+    "zooms_per_minute": 4,
+    "typewriter_cps": 20,
+    "transition_dur": 0.25
+  },
+
+  "audio": {
+    "clean_voice": true,
+    "music_db": -20,
+    "loudness_lufs": -14
+  },
+
+  "export": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "crf": 18,
+    "encoder": "x264",
+    "_encoder": "x264 = best quality | videotoolbox = much faster on a Mac, files a bit bigger"
+  },
+
+  "safe_area": { "top": 0.10, "bottom": 0.20, "left": 0.06, "right": 0.14 }
+}

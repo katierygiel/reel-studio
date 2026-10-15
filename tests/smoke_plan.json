@@ -1,0 +1,206 @@
+{
+  "title": "I spun the wheel",
+  "notes": "Hook on the wheel line, reveal the place, end on the photo + logo.",
+  "captions": {
+    "mode": "highlight",
+    "emphasis": [
+      "excited",
+      "amazing"
+    ]
+  },
+  "segments": [
+    {
+      "id": "s1",
+      "clip": "C01",
+      "in": 0.3,
+      "out": 7.6,
+      "tighten": true,
+      "why": "hook + build-up (um and long pause removed)"
+    },
+    {
+      "id": "s2",
+      "clip": "C03",
+      "in": 0,
+      "out": 3,
+      "volume": 0.5,
+      "transition": {
+        "type": "whip-left"
+      },
+      "why": "reveal the place"
+    },
+    {
+      "id": "s3",
+      "clip": "C01",
+      "in": 7.9,
+      "out": 10.8,
+      "tighten": true,
+      "transition": "fade",
+      "why": "reaction"
+    },
+    {
+      "id": "s4",
+      "clip": "C04",
+      "in": 0,
+      "out": 2,
+      "transition": "zoom",
+      "why": "HDR test clip"
+    },
+    {
+      "id": "s5",
+      "clip": "C05",
+      "dur": 2,
+      "transition": "white-flash",
+      "why": "ending photo"
+    }
+  ],
+  "zooms": [
+    {
+      "at": {
+        "seg": "s1",
+        "word": "finally"
+      },
+      "dur": 1.0,
+      "type": "punch"
+    },
+    {
+      "at": {
+        "seg": "s3",
+        "word": "Honestly"
+      },
+      "dur": 1.0,
+      "type": "push",
+      "scale": 1.15
+    }
+  ],
+  "overlays": [
+    {
+      "src": "C02",
+      "in": 0.5,
+      "at": {
+        "seg": "s1",
+        "word": "wheel"
+      },
+      "dur": 2.0,
+      "box": {
+        "x": 0.5,
+        "y": 0.38,
+        "w": 0.55
+      },
+      "border": 8,
+      "anim_in": "pop",
+      "anim_out": "pop",
+      "why": "show the wheel spinning"
+    },
+    {
+      "src": "C03",
+      "in": 4,
+      "at": {
+        "seg": "s1",
+        "word": "excited"
+      },
+      "dur": 1.2,
+      "full": true,
+      "why": "b-roll over narration"
+    },
+    {
+      "src": "sticker-white-bg.jpg",
+      "remove_bg": "white",
+      "at": {
+        "seg": "s3",
+        "word": "place"
+      },
+      "dur": 1.5,
+      "box": {
+        "x": 0.75,
+        "y": 0.45,
+        "w": 0.3
+      },
+      "anim_in": "slide-left"
+    },
+    {
+      "src": "logo.png",
+      "at": {
+        "seg": "s5",
+        "t": 0.3
+      },
+      "dur": 1.6,
+      "box": {
+        "x": 0.5,
+        "y": 0.25,
+        "w": 0.5
+      },
+      "anim_in": "pop"
+    }
+  ],
+  "texts": [
+    {
+      "text": "I SPUN\nTHE WHEEL",
+      "role": "hook",
+      "at": 0,
+      "dur": 1.8,
+      "anim": "pop",
+      "emphasis": [
+        "wheel"
+      ]
+    },
+    {
+      "text": "best spot in town",
+      "role": "label",
+      "at": {
+        "seg": "s2",
+        "t": 0.3
+      },
+      "dur": 2,
+      "anim": "slide-up",
+      "pos": [
+        0.5,
+        0.62
+      ]
+    },
+    {
+      "text": "the verdict:",
+      "role": "typewriter",
+      "at": {
+        "seg": "s3",
+        "t": 0.1
+      },
+      "dur": 2,
+      "pos": [
+        0.5,
+        0.3
+      ]
+    },
+    {
+      "text": "wait for it...",
+      "role": "funny",
+      "at": {
+        "seg": "s4",
+        "t": 0.1
+      },
+      "dur": 1.5,
+      "anim": "bounce",
+      "angle": -6
+    }
+  ],
+  "sfx": [
+    {
+      "name": "ding",
+      "at": {
+        "seg": "s3",
+        "word": "place"
+      },
+      "vol": 0.8
+    },
+    {
+      "name": "boing",
+      "at": {
+        "seg": "s4",
+        "t": 0.1
+      }
+    }
+  ],
+  "music": {
+    "src": "song.mp3",
+    "vol_db": -20
+  }
+}
